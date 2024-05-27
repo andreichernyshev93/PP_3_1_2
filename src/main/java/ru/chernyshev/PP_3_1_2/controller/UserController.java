@@ -26,7 +26,7 @@ public class UserController {
 
     @GetMapping("/")
     public String show(@RequestParam("id") Long id, Model model) {
-        model.addAttribute("user", userService.show(id));
+        model.addAttribute("user", userService.getUser(id));
         return "users/show";
     }
 
@@ -44,7 +44,7 @@ public class UserController {
 
     @GetMapping("/edit/")
     public String edit(@RequestParam("id") Long id, Model model) {
-        model.addAttribute("user", userService.show(id));
+        model.addAttribute("user", userService.getUser(id));
         return "users/edit";
     }
 

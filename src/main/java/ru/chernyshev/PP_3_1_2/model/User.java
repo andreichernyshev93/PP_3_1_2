@@ -1,27 +1,20 @@
 package ru.chernyshev.PP_3_1_2.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 
 @Entity
 @Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column()
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "surname")
     private String surname;
 
-    @Column(name = "age")
     private int age;
 
-    @Column(name = "email")
-    @Email
     private String email;
 
     public User() {
